@@ -13,6 +13,7 @@ namespace Efenex.view.clientes
     {
         private Cliente cliente;
         private ClientesController clientesController = new ClientesController();
+        IndexClientes Index = new IndexClientes();
         public FormCliente(Cliente cliente = null)
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Efenex.view.clientes
                 txtBoxNome.Text = cliente.Nome;
                 txtBoxCpf.Text = cliente.Cpf;
                 txtBoxRg.Text = cliente.Rg;
-                //txtBoxDataNascimento = cliente.DataNascimento;
+                //txtBoxDataNascimento.Value = cliente.DataNascimento;
             }
         }
 
@@ -61,14 +62,25 @@ namespace Efenex.view.clientes
                     MessageBox.Show("Ocorreu um erro ao atualizar o cliente.");
                 }
             }
-            IndexClientes Index = new IndexClientes();
             this.Hide();
-            Index.Show();
+            IndexClientes indexCliente = new IndexClientes();
+            indexCliente.Show();
         }
 
         private void txtBoxDataNascimento_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Index.Show();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -32,6 +32,7 @@
             this.listIndexClientes = new System.Windows.Forms.ListBox();
             this.btnEditCliente = new System.Windows.Forms.Button();
             this.btnDestroyCliente = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnNewCliente
@@ -74,17 +75,29 @@
             this.btnDestroyCliente.UseVisualStyleBackColor = true;
             this.btnDestroyCliente.Click += new System.EventHandler(this.btnDestroyCliente_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(29, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 41);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // IndexClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 501);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDestroyCliente);
             this.Controls.Add(this.btnEditCliente);
             this.Controls.Add(this.listIndexClientes);
             this.Controls.Add(this.BtnNewCliente);
             this.Name = "IndexClientes";
             this.Text = "Efenex - Clientes";
+            this.Load += new System.EventHandler(this.IndexClientes_Load);
             this.ResumeLayout(false);
 
         }
@@ -95,5 +108,6 @@
         private System.Windows.Forms.ListBox listIndexClientes;
         private System.Windows.Forms.Button btnEditCliente;
         private System.Windows.Forms.Button btnDestroyCliente;
+        private System.Windows.Forms.Button button1;
     }
 }

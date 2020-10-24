@@ -60,5 +60,15 @@ namespace Efenex.view
             }
             ReloadResources();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void IndexClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

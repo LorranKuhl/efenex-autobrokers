@@ -16,8 +16,8 @@ namespace Efenex
 
         public bool Save()
         {
-                var response = Connection.Execute(@$"INSERT INTO {TableName()}(Nome,Cpf,Rg,DataNascimento) VALUES(@Nome,@Cpf,@Rg,@DataNascimento)", this);
-                return response == 1;
+            var response = Connection.Execute(@$"INSERT INTO {TableName()}(Nome,Cpf,Rg,DataNascimento) VALUES(@Nome,@Cpf,@Rg,@DataNascimento)", this);
+            return response == 1;
         }
     }
 }

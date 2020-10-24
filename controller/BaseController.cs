@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Efenex.controller
 {
-    class BaseController : IBaseController
+    public class BaseController : IBaseController
     {
         protected IDbConnection Connection = DatabaseConnection.Instance;
 
